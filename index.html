@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alphariu5 OS</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">   
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+    <body>
+            <div id="desktop">
+                <div class="icon" onclick="createWindow('MyComputer')">
+                    <img src="assets/img/mycomputer.png" class="appIcon"><br>My Computer
+                </div>
+                <div class = "icon" onclick="createWindow('About')">
+                    <img src="assets/img/notepad.png" class="appIcon"><br>about.txt
+                </div>
+                <div class="icon" onclick="createWindow('Documents')">
+                    <img src="assets/img/directory.png" class="appIcon"><br>Documents
+                </div>
+
+                <div class="icon" onclick="createWindow('Strooggle')">
+                    <img src="assets/img/world.png" class="appIcon"><br>Strooggle
+                </div>
+                <div id="taskbar">
+                    <div id="start"><img src="assets/img/start.png" class="startIcon"></div>
+                    <div id="clock">
+                        <div id="time"></div>
+                        <div id="date"></div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
