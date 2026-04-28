@@ -8,7 +8,7 @@ const apps = {
       <table class="specsTable">
         <tr>
           <td>Name of the Device</td>
-          <td>alfario PC</td>
+          <td>Test Type-01</td>
         </tr>
         <tr>
           <td>CPU</td>
@@ -40,18 +40,31 @@ const apps = {
         </tr>
       </table>
       <br>
-      <p class="textOpenWindow" onclick="createWindow('Contact')"><u>Contact Support</u></p>
+      <b><p class="textOpenWindow" onclick="createWindow('Contact')"><u>Contact Support</u></p></b>
     </div>`
   },
   Documents: {
     title: "Documents",
-    content: `<p>PLACEHOLDER</p>`
+    content: `
+    <div class="documentsContent">
+      <div class="documentsFolder">
+        <a href="https://open.spotify.com/playlist/76QKQZ0PWoHBdg62DfQMUK?si=479Tml2MR0qwjqzPmyM5aQ" target="_blank">
+          <img src="assets/img/directory.png" class="folderIcon"><br>Music
+        </a>
+      </div>
+      <div class="documentsFolder">
+        <a href="https://imgur.com" target="_blank">
+          <img src="assets/img/directory.png" class="folderIcon"><br>Images
+        </a>
+      </div>
+    </div>
+    `
   },
   About:{
     title:"about.txt",
     content: `
-      <div class = "">
-
+      <div class ="aboutWindow">
+        <h1></h1>
       </div>
       `
   },
@@ -60,15 +73,17 @@ const apps = {
     content:`
       <div class="form-container">
       <h2>Contact Support</h2>
-        <form method="POST" action="https://formsubmit.co/h3kill.016@gmail.com">
-          <input name="name" type="text" placeholder="Enter Name" required/>
-          <br>
-          <input email="email" type="email" placeholder="Enter Email" required/>
-          <br>
-          <textarea name="message" placeholder"Enter Message"></textarea>
-          <br>
-          <button type="submit">Submit</button>
-        </form>
+        <div class="contactForm">
+          <form method="POST" action="https://formsubmit.co/h3kill.016@gmail.com">
+            <input name="name" type="text" placeholder="Enter Name" required/>
+            <br>
+            <input email="email" type="email" placeholder="Enter Email" required/>
+            <br>
+            <textarea name="message" placeholder"Enter Message"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
       `
    },
@@ -76,12 +91,13 @@ const apps = {
   Strooggle: {
     title: "Strooggle",
     content: `
-      <p>Links:</p>
-      <ul>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-        <li><a href="https://github.com/alphar1u5" target="_blank">GitHub</a></li>
-      </ul>
+        <div class="browserSites">
+          <li><a href="https://www.google.com" target="_blank">Google</a></li>
+          <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+          <li><a href="https://github.com/alphar1u5" target="_blank">GitHub</a></li>
+          <li><a href="https://x.com/alphariu5" target="_blank">Twitter</a></li>
+          <li><a href="https://www.reddit.com/user/H3KILL/" target="_blank">Reddit</a></li>
+        </div>
     `
   }
 };

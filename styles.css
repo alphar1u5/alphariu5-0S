@@ -11,11 +11,15 @@ body{
   cursor: pointer;
   margin: 20px;
 }
+
 .textOpenWindow{
       text-align: center;
       color: #000000;
       cursor: pointer;
       margin: 10px;
+}
+.textOpenWindow:hover{
+      color: red;
 }
 .window {
       width: 300px;
@@ -31,6 +35,11 @@ body{
       min-height: 300px;
       max-width: 750px;
       max-height: 550px;
+}
+.documentsContent{
+      justify-content: start;
+      display: flex;
+      gap: 13px;
 }
 
 .title-bar {
@@ -56,6 +65,12 @@ body{
       justify-content: space-between;
       padding: 0 10px;
       box-shadow: inset -2px -2px #000, inset 2px 2px #363535;
+}
+.contactForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #start {
@@ -93,11 +108,14 @@ body{
 .windowContent{
       margin: 5px;
       display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+      justify-content: center;
+      align-items: center;
 }
 table, tr, td{
       border: 1px solid black;
       border-collapse: collapse;
+}
+.browserSites{
+      display: flex;
+      gap: 10px;
 }
