@@ -54,7 +54,15 @@ h1, .Bold{
       min-width: 400px;
       min-height: 300px;
       max-width: 750px;
-      max-height: 550px;
+      max-height: 600px;
+}
+
+.browserWindow{
+      justify-items: center;
+      min-width: 400;
+      min-height: 800;
+      max-width: 900px;
+      max-height: 800px;
 }
 .documentsContent{
       justify-content: start;
@@ -95,9 +103,9 @@ h1, .Bold{
 }
 
 #start {
-      background: #0124be;
-      border: 2px solid #37359b;
-      box-shadow: inset -2px -2px #0022b9, inset 2px 2px #2325a7;
+      background: #0029df;
+      border: 2px solid #08093d;
+      box-shadow: inset -2px -2px #0029df, inset 2px 2px #0029df;
       padding: 5px 10px;
       cursor: pointer;
       margin: 5px;
@@ -105,11 +113,10 @@ h1, .Bold{
 
 #clock {
   margin: 15px;
-  background:#0124be;
-  box-shadow: -2px -2px #0022b9, inset 2px 2px #2325a7;
+  background:#002fff;
   padding: 2px 5px;
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
   min-width: 90px;
   color: #fff;
 }
@@ -176,6 +183,6 @@ table, tr, td{
 }
 .browserLogo{
       margin: 5px;
-      height: 50;
-      width: 100;
+      height: 45;
+      width: 90;
 }
