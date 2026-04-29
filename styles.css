@@ -118,6 +118,7 @@ table, tr, td{
 .browserSites{
       display: flex;
       gap: 20px;
+      text-align: center;
 }
 .documentsLink{
       color: black;
@@ -137,4 +138,23 @@ table, tr, td{
 .steamLink:visited{
       color: white;
       text-decoration: none;
+}
+.browserIcon{
+      width: 64px;
+      height: 64px;
+}
+.browserLink{
+      color: black;
+      text-decoration: none;
+}
+.browserLink:hover{
+      color: blue;
+}
+.browserLink:visited{
+      color: black;
+}
+.browserLogo{
+      margin: 5px;
+      height: 50;
+      width: 100;
 }
