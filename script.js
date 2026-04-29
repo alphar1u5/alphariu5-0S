@@ -48,12 +48,12 @@ const apps = {
     content: `
     <div class="documentsContent">
       <div class="documentsFolder">
-        <a href="https://open.spotify.com/playlist/76QKQZ0PWoHBdg62DfQMUK?si=479Tml2MR0qwjqzPmyM5aQ" target="_blank">
+        <a class="documentsLink" href="https://open.spotify.com/playlist/76QKQZ0PWoHBdg62DfQMUK?si=479Tml2MR0qwjqzPmyM5aQ" target="_blank">
           <img src="assets/img/directory.png" class="folderIcon"><br>Music
         </a>
       </div>
       <div class="documentsFolder">
-        <a href="https://imgur.com" target="_blank">
+        <a class="documentsLink" href="https://imgur.com" target="_blank">
           <img src="assets/img/directory.png" class="folderIcon"><br>Images
         </a>
       </div>
@@ -92,11 +92,11 @@ const apps = {
     title: "Strooggle",
     content: `
         <div class="browserSites">
-          <li><a href="https://www.google.com" target="_blank">Google</a></li>
-          <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-          <li><a href="https://github.com/alphar1u5" target="_blank">GitHub</a></li>
-          <li><a href="https://x.com/alphariu5" target="_blank">Twitter</a></li>
-          <li><a href="https://www.reddit.com/user/H3KILL/" target="_blank">Reddit</a></li>
+          <a href="https://www.google.com" target="_blank">Google</a>
+          <a href="https://www.youtube.com" target="_blank">YouTube</a>
+          <a href="https://github.com/alphar1u5" target="_blank">GitHub</a>
+          <a href="https://x.com/alphariu5" target="_blank">Twitter</a>
+          <a href="https://www.reddit.com/user/H3KILL/" target="_blank">Reddit</a>
         </div>
     `
   }
