@@ -4,38 +4,38 @@ const apps = {
   MyComputer: {
     title: "My Computer",
     content: `<div class = "aboutDevice">
-      <h3>About the device</h3>
+      <h3 class="Bold">About the device</h3>
       <table class="specsTable">
         <tr>
-          <td>Name of the Device</td>
+          <td class="Bold">Name of the Device</td>
           <td>Test Type-01</td>
         </tr>
         <tr>
-          <td>CPU</td>
+          <td class="Bold">CPU</td>
           <td>ENCOM Core T4</td>
         </tr>
         <tr>
-          <td>Operating System</td>
+          <td class="Bold">Operating System</td>
           <td>alphariu5 OS</td>
         </tr>
         <tr>
-          <td>OS Version</td>
+          <td class="Bold">OS Version</td>
           <td>a5-1.0.0</td>
         </tr>
         <tr>
-          <td>Installed RAM</td>
+          <td class="Bold">Installed RAM</td>
           <td>8 GB (7.9 Usable)</td>
         </tr>
         <tr>
-          <td>Graphic Card</td>
+          <td class="Bold">Graphic Card</td>
           <td>strk UHD Graphics 540 (128 MB)</td>
         </tr>
         <tr>
-          <td>Device ID</td>
+          <td class="Bold">Device ID</td>
           <td>Q8TF5-B75P7-R5YRJ-VKSZQ</td>
         </tr>
         <tr>
-          <td>System Type</td>
+          <td class="Bold">System Type</td>
           <td>64-bit operating system, x64 processor</td>
         </tr>
       </table>
@@ -48,12 +48,12 @@ const apps = {
     content: `
     <div class="documentsContent">
       <div class="documentsFolder">
-        <a class="documentsLink" href="https://open.spotify.com/playlist/76QKQZ0PWoHBdg62DfQMUK?si=479Tml2MR0qwjqzPmyM5aQ" target="_blank">
+        <a class="documentsLink" href="https://open.spotify.com/playlist/76QKQZ0PWoHBdg62DfQMUK?si=479Tml2MR0qwjqzPmyM5aQ" target="_blank" rel="noopener noreferrer">
           <img src="assets/img/directory.png" class="folderIcon"><br>Music
         </a>
       </div>
       <div class="documentsFolder">
-        <a class="documentsLink" href="https://imgur.com" target="_blank">
+        <a class="documentsLink" href="https://imgur.com" target="_blank" rel="noopener noreferrer">
           <img src="assets/img/directory.png" class="folderIcon"><br>Images
         </a>
       </div>
@@ -64,7 +64,8 @@ const apps = {
     title:"about.txt",
     content: `
       <div class ="aboutWindow">
-        <h1></h1>
+        <h1>GIANT FUCKASS TITLE PLACEHOLDER</h1>
+        <p>GIANT FUCKASS TEXT PLACEHOLDER</p>
       </div>
       `
   },
@@ -96,9 +97,9 @@ const apps = {
         </div>
         <br>
         <div class="browserSites">
-          <a href="https://github.com/alphar1u5" target="_blank" class="browserLink"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
-          <a href="https://x.com/alphariu5" target="_blank" class="browserLink"><img src="assets/img/twitter-64.png" class="browserIcon"><br>Twitter</a>
-          <a href="https://www.reddit.com/user/H3KILL/" target="_blank" class="browserLink"><img src="assets/img/reddit-64.png" class="browserIcon"><br>Reddit</a>
+          <a href="https://github.com/alphar1u5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
+          <a href="https://x.com/alphariu5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/twitter-64.png" class="browserIcon"><br>Twitter</a>
+          <a href="https://www.reddit.com/user/H3KILL/" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/reddit-64.png" class="browserIcon"><br>Reddit</a>
         </div>
     `
   }
@@ -116,6 +117,7 @@ function createWindow(appId) {
     <div class="title-bar">
       <span>${app.title}</span>
       <div class="buttons">
+        <button><a href="https://archive.org/details/microsoftwindows00boyc/mode/2up" target="_blank" rel="noopener noreferrer"><img src="assets/img/help.png" class="windowButton"></a></button>
         <button onclick="this.closest('.window').remove()"><img src="assets/img/close.png" class="windowButton"></button>
       </div>
     </div>
