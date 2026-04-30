@@ -1,6 +1,7 @@
 @font-face {
       font-family: alphariu5-Normal;
       src: url(assets/fonts/ms_sans_serif.woff) format('woff');
+      src: url(assets/fonts/ms_sans_serif.woff2) format('woff2');
       font-weight: normal;
       font-style: normal;
       font-display: normal;
@@ -9,6 +10,7 @@
 @font-face {
       font-family: alphariu5-Bold;
       src: url(assets/fonts/ms_sans_serif_bold.woff) format('woff');
+      src: url(assets/fonts/ms_sans_serif_bold.woff2) format('woff2');
       font-weight: normal;
       font-style: normal;
       font-display: normal;
@@ -51,18 +53,25 @@ h1, .Bold{
       left: 100px;
       resize: both;
       overflow: auto;
-      min-width: 400px;
-      min-height: 300px;
-      max-width: 750px;
-      max-height: 600px;
+      display: flex;
+      flex-direction: column;
 }
 
 .browserWindow{
-      justify-items: center;
-      min-width: 400;
-      min-height: 800;
-      max-width: 900px;
-      max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.searchBar {
+  width: 70%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #aaa;
+  border-radius: 20px;
+  outline: none;
 }
 .documentsContent{
       justify-content: start;
@@ -182,7 +191,11 @@ table, tr, td{
       color: black;
 }
 .browserLogo{
-      margin: 5px;
-      height: 45;
-      width: 90;
+      font-family: Helvetica;
+      font-size: 130px;
+      color: aqua;
+      background-color: #ca2828;
+      border-radius: 5px;
+      width: 60;
+      height: 30;
 }

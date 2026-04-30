@@ -12,7 +12,7 @@ const apps = {
         </tr>
         <tr>
           <td class="Bold">CPU</td>
-          <td>ENCOM Core T4</td>
+          <td>ENCOM Core T4-GDC1 CPU @ 1.20 GHz (1.40 GHz)</td>
         </tr>
         <tr>
           <td class="Bold">Operating System</td>
@@ -94,8 +94,10 @@ const apps = {
     content: `
         <div class="browserWindow">
           <div>
-            <img src="assets/img/browserLogo.png" class="browserLogo">
+            <h1 class="browserLogo">Strooggle</h1>
           </div>
+          
+          <input type="text" placeholder="Buscar en Stroogle..." class="searchBar">
           <br>
           <div class="browserSites">
             <a href="https://github.com/alphar1u5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
@@ -112,7 +114,7 @@ function createWindow(appId) {
   if (!app) return;
 
   const win = document.createElement('div');
-  win.className = 'window';
+  win.className = "window";
   win.style.zIndex = zIndex++;
 
   win.innerHTML = `
