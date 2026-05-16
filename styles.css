@@ -22,7 +22,7 @@ https://imgur.com/a/HWUAvIV
 }
 
 body{
-    background-color:#879493;
+    background-color:#008080;
     margin: 0px;
     font-family: alphariu5-Normal;
 }
@@ -50,9 +50,9 @@ h1, .Bold{
 }
 .window {
       width: 300px;
-      background: #c0c0c0;
+      background: #fdffff;
       border: 1px solid #4e4c4c;
-      box-shadow: inset -2px -2px #000, inset 2px 2px #fff;
+      box-shadow: inset -2px -2px #000, inset 2px 2px #c3c3c3;
       position: absolute;
       top: 100px;
       left: 100px;
@@ -86,7 +86,7 @@ h1, .Bold{
 }
 
 .title-bar {
-  background: #002fff;;
+  background: #010081;
   color: white;
   padding: 3px;
   display: flex;
@@ -102,12 +102,12 @@ h1, .Bold{
       bottom: 0;
       width: 100%;
       height: 40px;
-      background: #002fff;
+      background: #c3c3c3;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 10px;
-      box-shadow: inset -2px -2px #0022b9, inset 2px 2px #08093d;
+      box-shadow: inset -2px -2px #c3c3c3, inset 2px 2px #c3c3c3;
 }
 .contactForm{
   display: flex;
@@ -117,9 +117,9 @@ h1, .Bold{
 }
 
 #start {
-      background: #0029df;
-      border: 2px solid #08093d;
-      box-shadow: inset -2px -2px #0029df, inset 2px 2px #0029df;
+      background: #c3c3c3;
+      border: 2px solid #aaaaaa;
+      box-shadow: inset -2px -2px #c3c3c3, inset 2px 2px #c3c3c3;
       padding: 5px 10px;
       cursor: pointer;
       margin: 5px;
@@ -127,17 +127,17 @@ h1, .Bold{
 
 #clock {
   margin: 15px;
-  background:#002fff;
+  background:#c3c3c3;
   padding: 2px 5px;
   text-align: right;
   font-size: 14px;
   min-width: 90px;
-  color: #fff;
+  color: black;
 }
 
 .startIcon{
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
 }
 .appIcon{
       width: 40px;
