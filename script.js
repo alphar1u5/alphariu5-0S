@@ -89,15 +89,15 @@ const apps = {
       `
    },
 
-  Strooggle: {
-    title: "Strooggle",
+  Internet: {
+    title: "Internet",
     content: `
         <div class="browserWindow">
           <div>
-            <h1 class="browserLogo">Strooggle</h1>
+            <h1 class="browserLogo">Internet</h1>
           </div>
           
-          <input type="text" placeholder="🔍Search.." class="searchBar">
+          <input type="text" placeholder="Search something.." class="searchBar">
           <br>
           <div class="browserSites">
             <a href="https://github.com/alphar1u5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
