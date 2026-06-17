@@ -96,12 +96,13 @@ const apps = {
           <div>
             <h1 class="browserLogo">Internet</h1>
           </div>
-          
-          <input type="text" placeholder="Search something.." class="searchBar">
+          <br>
+          <input type="text" placeholder="Something went wrong :(" class="searchBar">
           <br>
           <div class="browserSites">
-            <a href="https://github.com/alphar1u5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
             <a href="https://x.com/alphariu5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/twitter-64.png" class="browserIcon"><br>Twitter</a>
+            <a href="https://www.twitch.tv/alphariu5_" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/twitch-64.png" class="browserIcon"><br>Twitch</a>  
+            <a href="https://github.com/alphar1u5" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/github-8-64.png" class="browserIcon"><br>GitHub</a>
             <a href="https://www.reddit.com/user/H3KILL/" target="_blank" class="browserLink" rel="noopener noreferrer"><img src="assets/img/reddit-64.png" class="browserIcon"><br>Reddit</a>
           </div>
         </div>

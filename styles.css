@@ -49,7 +49,8 @@ h1, .Bold{
       color: red;
 }
 .window {
-      width: 300px;
+      height: 500px;
+      width: 800px;
       background: #fdffff;
       border: 1px solid #4e4c4c;
       box-shadow: inset -2px -2px #000, inset 2px 2px #c3c3c3;
@@ -66,8 +67,10 @@ h1, .Bold{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
+  width: 100%;
+  gap: 15px;
 }
 .searchBar {
   width: 70%;
@@ -77,6 +80,7 @@ h1, .Bold{
   border: 2px solid #aaa;
   border-radius: 20px;
   outline: none;
+  margin: 10px 0;
 }
 .documentsContent{
       justify-content: start;
@@ -116,6 +120,7 @@ h1, .Bold{
   text-align: center;
 }
 
+
 #start {
       background: #c3c3c3;
       border: 2px solid #aaaaaa;
@@ -148,6 +153,7 @@ h1, .Bold{
       height: 10px;
 }
 .windowContent{
+      flex: 1;
       margin: 5px;
       display: flex;
       justify-content: center;
@@ -159,7 +165,7 @@ table, tr, td{
 }
 .browserSites{
       display: flex;
-      gap: 20px;
+      gap: 30px;
       text-align: center;
 }
 .documentsLink{
@@ -197,10 +203,12 @@ table, tr, td{
 }
 .browserLogo{
       font-family: Helvetica;
-      font-size: 130px;
+      font-size: 18px;
       color: aqua;
-      background-color: #4b4c5a;
+      background-color: #2a2b38;
       border-radius: 5px;
-      width: 60;
-      height: 30;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 5px;
 }
