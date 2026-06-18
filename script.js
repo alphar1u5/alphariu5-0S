@@ -40,9 +40,10 @@ const apps = {
         </tr>
       </table>
       <br>
-      <b><p class="textOpenWindow" onclick="createWindow('Contact')"><u>Contact Support</u></p></b>
+      <b><p class="textOpenSupport" onclick="createWindow('Contact')"><u>Contact Support</u></p></b>
     </div>`
   },
+
   Documents: {
     title: "Documents",
     content: `
@@ -71,10 +72,11 @@ const apps = {
   },
    Contact: {
     title:"Support",
-    content:`
-      <div class="form-container">
-      <h2>Contact Support</h2>
+    content:` 
+    <div class="formContainer">
         <div class="contactForm">
+          <h2>Contact Support</h2>
+          <br>
           <form method="POST" action="https://formsubmit.co/h3kill.016@gmail.com">
             <input name="name" type="text" placeholder="Enter Name" required/>
             <br>
@@ -107,9 +109,52 @@ const apps = {
           </div>
         </div>
     `
-  }
+  },
+
+  startupService: {
+    title: "funny little thing",
+    content: `
+        <h3>funny program</h3>
+        <br>
+        <p>Running...</p>
+        <br>
+        <p>Status: running now lol</p>
+    `
+  },
 };
 
+const ads = [
+    {
+        title: "Proyecto RPG",
+        content: `
+            <h2>Proyecto RPG</h2>
+            <p>¡Explora nuestro servidor!</p>
+            <button onclick="createWindow('rpgInfo')">
+                Más información
+            </button>
+        `
+    },
+
+    {
+        title: "Canal de Streams",
+        content: `
+            <h2>Streams semanales</h2>
+            <p>Todos los viernes.</p>
+        `
+    },
+
+    {
+        title: "Proyecto Secreto",
+        content: `
+            <h2>Próximamente...</h2>
+            <p>Algo grande se acerca.</p>
+        `
+    }
+];
+
+const adSound = new Audio("assets/aud/windowsError.wav");
+
+//ventanas
 function createWindow(appId) {
   const app = apps[appId];
   if (!app) return;
@@ -157,20 +202,102 @@ function makeDraggable(win) {
   });
 }
 
+//reloj
 function updateClock() {
-  const now = new Date();
 
-  const time = now.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit'
-  });
+    const timeElement = document.getElementById("time");
+    const dateElement = document.getElementById("date");
 
-  const date = now.toLocaleDateString();
+    if (!timeElement || !dateElement) return;
 
-  document.getElementById("time").textContent = time;
-  document.getElementById("date").textContent = date;
+    const now = new Date();
+
+    timeElement.textContent =
+        now.toLocaleTimeString("es-MX", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+    dateElement.textContent =
+        now.toLocaleDateString("es-MX");
 }
 
 setInterval(updateClock, 1000);
 
 updateClock();
+
+
+//ads
+function createAdPopup() {
+
+    adSound.currentTime = 0;
+    adSound.play();
+
+    const ad =
+        ads[Math.floor(Math.random() * ads.length)];
+
+    const win = document.createElement("div");
+
+    win.className = "window ad-window";
+
+    win.style.width = "350px";
+    win.style.height = "200px";
+
+    const maxX = window.innerWidth - 400;
+    const maxY = window.innerHeight - 250;
+
+    win.style.left = Math.random() * maxX + "px";
+    win.style.top = Math.random() * maxY + "px";
+
+    win.innerHTML = `
+        <div class="title-bar">
+            <span>${ad.title}</span>
+
+            <div class="buttons">
+                <button onclick="this.closest('.window').remove()"><img src="assets/img/close.png" class="windowButton"></button>
+            </div>
+        </div>
+
+        <div class="content">
+            ${ad.content}
+        </div>
+    `;
+
+    makeDraggable(win);
+
+    document.getElementById("desktop").appendChild(win);
+}
+
+let adsEnabled = true;
+
+function scheduleNextAd() {
+
+    if (!adsEnabled) return;
+
+    const delay =
+        Math.floor(Math.random() * 15000) + 10000;
+
+    setTimeout(() => {
+
+        createAdPopup();
+
+        scheduleNextAd();
+
+    }, delay);
+}
+
+window.addEventListener("load", () => {
+
+    console.log("Sistema iniciado");
+
+    setTimeout(() => {
+
+        console.log("Lanzando servicio");
+
+        createWindow("startupService");
+
+        scheduleNextAd();
+
+    }, 15000);
+
+});

@@ -39,18 +39,17 @@ h1, .Bold{
   margin: 20px;
 }
 
-.textOpenWindow{
+.textOpenSupport{
       text-align: center;
       color: #000000;
       cursor: pointer;
       margin: 10px;
 }
-.textOpenWindow:hover{
+.textOpenSupport:hover{
       color: red;
 }
 .window {
-      height: 500px;
-      width: 800px;
+
       background: #fdffff;
       border: 1px solid #4e4c4c;
       box-shadow: inset -2px -2px #000, inset 2px 2px #c3c3c3;
@@ -62,8 +61,13 @@ h1, .Bold{
       display: flex;
       flex-direction: column;
 }
+.aboutWindow{
+      height: 350px;
+      width: 475px;
+}
 
 .browserWindow{
+  background-color: #100f18;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,6 +75,9 @@ h1, .Bold{
   height: 100%;
   width: 100%;
   gap: 15px;
+  height: 500px;
+      width: 800px;
+  
 }
 .searchBar {
   width: 70%;
@@ -83,10 +90,12 @@ h1, .Bold{
   margin: 10px 0;
 }
 .documentsContent{
-      justify-content: start;
+      justify-content: center;
       display: flex;
       gap: 13px;
       font-family: alphariu5-Bold;
+      height: 250px;
+      width: 500px;
 }
 
 .title-bar {
@@ -119,7 +128,10 @@ h1, .Bold{
   align-items: center;
   text-align: center;
 }
-
+.formContainer{
+      height: 200px;
+      width: 300px;
+}
 
 #start {
       background: #c3c3c3;
@@ -165,7 +177,7 @@ table, tr, td{
 }
 .browserSites{
       display: flex;
-      gap: 30px;
+      gap: 15px;
       text-align: center;
 }
 .documentsLink{
@@ -177,7 +189,7 @@ table, tr, td{
       text-decoration: none;
 }
 .documentsLink:hover{
-      color: blue;
+      color: rgb(0, 72, 255);
 }
 .steamLink{
       color: white;
@@ -190,16 +202,26 @@ table, tr, td{
 .browserIcon{
       width: 64px;
       height: 64px;
+      margin: 5px;
 }
 .browserLink{
+      display: inline-block;
+      box-sizing: border-box;
+      width: 90px;
+      height: 110px;
+      padding: 8px 6px;
       color: black;
       text-decoration: none;
-}
-.browserLink:hover{
-      color: blue;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      text-align: center;
 }
 .browserLink:visited{
       color: black;
+}
+.browserLink:hover{
+      color: rgb(0, 72, 255);
+      background-color: #eef6ff;
 }
 .browserLogo{
       font-family: Helvetica;
@@ -211,4 +233,16 @@ table, tr, td{
       height: auto;
       margin: 0;
       padding: 5px;
+}
+
+.ad-window .title-bar {
+    background: darkred;
+}
+
+.ad-window .content {
+    text-align: center;
+}
+
+.ad-window h2 {
+    margin-top: 10px;
 }
