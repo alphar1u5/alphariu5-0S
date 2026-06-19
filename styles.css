@@ -241,3 +241,43 @@ table, tr, td{
 .ad-window h2 {
     margin-top: 10px;
 }
+
+.terminal-window {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.terminal-window .content {
+    background: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    background: black;
+    color: #00ff00;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #00ff00;
+}
+
+#terminal-input {
+    background: black;
+    color: #00ff00;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    width: 80%;
+}

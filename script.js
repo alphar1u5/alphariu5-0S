@@ -63,6 +63,7 @@ const apps = {
   },
   About:{
     title:"about.txt",
+    backgroundColor: "#2a2b38",
     content: `
       <div class ="aboutWindow">
         <h1>GIANT FUCKASS TITLE PLACEHOLDER</h1>
@@ -82,7 +83,7 @@ const apps = {
             <br>
             <input email="email" type="email" placeholder="Enter Email" required/>
             <br>
-            <textarea name="message" placeholder"Enter Message"></textarea>
+            <textarea name="message" placeholder= "Enter Message"></textarea>
             <br>
             <button type="submit">Submit</button>
           </form>
@@ -111,14 +112,37 @@ const apps = {
     `
   },
 
+  Terminal: {
+    title: "Command Prompt",
+    width: 700,
+    height: 400,
+    content: `
+        <div class="terminal-window">
+            <div class="content">
+                <div id="terminal-output"></div>
+
+                <div class="terminal-input-row">
+                    C:\\>
+                    <input
+                        id="terminal-input"
+                        type="text"
+                        onkeydown="handleTerminal(event)"
+                    >
+                </div>
+            </div>
+        </div>
+    `
+},
+
   startupService: {
     title: "funny little thing",
     content: `
-        <h3>funny program</h3>
-        <br>
-        <p>Running...</p>
-        <br>
-        <p>Status: running now lol</p>
+        <div class="startupService">
+          <h3>funny program</h3>
+          <p>Running...</p>
+          <p>Status: running now lol</p>
+          <img src="assets/img/themau5.gif">
+        </div>
     `
   },
 };
@@ -162,6 +186,13 @@ function createWindow(appId) {
   const win = document.createElement('div');
   win.className = "window";
   win.style.zIndex = zIndex++;
+
+  if (app.width) {
+    win.style.width = app.width + "px";
+  }
+  if (app.height) {
+    win.style.height = app.height + "px";
+  }
 
   win.innerHTML = `
     <div class="title-bar">
@@ -301,3 +332,178 @@ window.addEventListener("load", () => {
     }, 15000);
 
 });
+
+//Terminal
+function handleTerminal(event) {
+
+    if (event.key !== "Enter") return;
+
+    const input = event.target;
+    const command = input.value.trim().toLowerCase();
+
+    executeCommand(command);
+
+    input.value = "";
+}
+
+//Termnial commands
+function executeCommand(command) {
+
+    const output =
+        document.getElementById("terminal-output");
+
+    switch(command) {
+
+        case "help":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >just type something n hope it works
+                </div>
+            `;
+            break;
+
+        case "ads_off":
+
+            adsEnabled = false;
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >Advertisement Service Disabled.
+                </div>
+            `;
+            break;
+
+            case "ads_on":
+
+            adsEnabled = true;
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >Advertisement Service Enabled.
+                </div>
+            `;
+            break;
+
+        case "sudo":
+
+            output.innerHTML += `
+                <div>
+                  <p>>${command}</p>
+                  >you dont have the permissions to run this command
+                </div>
+            `;
+
+            break;
+            
+        case "sudo rm -rf /":
+
+            output.innerHTML += `
+                <div>
+                  <p>>${command}</p>
+                    >why do you hate me :(
+                </div>
+            `;
+
+            break;
+
+        case "deadmau5":
+
+            output.innerHTML += `
+                <div>
+                    <p>
+                      ⣿⣿⣿⠿⠛⠛⠋⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠛⠙⠛⠻⢿⣿⣿⣿⣿
+                      ⣿⡟⠁⠄⠄⠄⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⡿⠋⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿
+                      ⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⣿⣿⣿⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
+                      ⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
+                      ⣿⣷⡀⠄⠄⠄⠄⠄⠄⣰⣾⣿⡆⠄⠄⠄⢾⣿⣶⡄⠄⠄⠄⠄⠄⠄⣠⣿⣿⣿
+                      ⣿⣿⣿⣦⣄⣀⠄⠄⠄⠻⠿⠛⠄⠄⠄⠄⠈⠛⠿⠃⠄⠄⢀⣀⣤⣾⣿⣿⣿⣿
+                      ⣿⣿⣿⣿⣿⣿⣿⣿⠄⣤⣄⣀⣀⣀⣀⣀⣀⣀⣤⡤⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                      ⣿⣿⣿⣿⣿⣿⣿⣿⣆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡈⠻⠿⣿⣿⣿⠿⠛⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                    </p>
+
+                    >man of culture i see...
+                </div>
+            `;
+
+            break;
+
+        case "secret":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >ACCESS GRANTED
+                </div>
+            `;
+
+            break;
+        
+        case "credits":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    <p>Created by: alphariu5</p>
+                    <p>...</p>
+                    <p>thats it</p>
+                </div>
+            `;
+
+            break;
+
+            case "whoami":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >MASTER_CONTROL_PROGRAM
+                </div>
+            `;
+
+            break;
+
+            case "dir":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >bro this is a fake windows, wtf are you expecting?????
+                </div>
+            `;
+
+            break;
+
+            case "cd":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >THIS IS A WEBSITE, WTF ARE YOU TRYING TO DO?????????
+                </div>
+            `;
+
+            break;
+
+            case "clear":
+            case "cls":
+
+                output.innerHTML = "";
+
+                break;
+
+        default:
+
+            output.innerHTML += `
+                <div>
+                    <p>>Unknown command: ${command}</p>
+                    <p>>(if you send me the command you typed maybe ill add it later)</p>
+                </div>
+            `;
+    }
+}
