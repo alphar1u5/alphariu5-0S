@@ -56,13 +56,17 @@ h1, .Bold{
       display: flex;
       flex-direction: column;
 }
-.aboutWindow{
-      height: 350px;
-      width: 475px;
+.aboutDevice{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 }
 
 .browserWindow{
-  background-color: #100f18;
+      color: #ffffff;
+  font-family: helvetica, sans-serif;
+  background-color: #6c3398;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,9 +74,8 @@ h1, .Bold{
   height: 100%;
   width: 100%;
   gap: 15px;
-  height: 500px;
-      width: 800px;
-  
+  height: 100%;
+  width: 100%;
 }
 .searchBar {
   width: 70%;
@@ -219,15 +222,12 @@ table, tr, td{
       background-color: #eef6ff;
 }
 .browserLogo{
-      font-family: Helvetica;
-      font-size: 18px;
-      color: aqua;
-      background-color: #2a2b38;
+      width: 370px;
+      height: 92px;
+      margin: 5px;
+      padding: 10px;
+      background-color:#010081;
       border-radius: 5px;
-      width: auto;
-      height: auto;
-      margin: 0;
-      padding: 5px;
 }
 
 .ad-window .title-bar {
@@ -252,7 +252,7 @@ table, tr, td{
 
 .terminal-window .content {
     background: black;
-    color: #00ff00;
+    color: #ffffff;
     font-family: "Courier New", monospace;
     padding: 10px;
     width: 100%;
@@ -267,17 +267,40 @@ table, tr, td{
     flex: 1;
     overflow-y: auto;
     background: black;
-    color: #00ff00;
+    color: #ffffff;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #00ff00;
+    border: 1px solid #ffffff;
 }
 
 #terminal-input {
     background: black;
-    color: #00ff00;
+    color: #ffffff;
     border: none;
     outline: none;
     font-family: inherit;
     width: 80%;
+}
+
+.theGridCommand {
+    color: #ffffff;
+}
+.theGridCommand:hover {
+    color: #00fbff;
+    cursor: pointer;
+}
+
+.funnyVirus {
+      background-color: #fff200;
+      color: #9000ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+}
+.funnyVirusImage {
+      width: 350px;
+      height: 200px;
 }

@@ -3,8 +3,10 @@ let zIndex = 1;
 const apps = {
   MyComputer: {
     title: "My Computer",
+    width: 600,
+    height: 400,
     content: `<div class = "aboutDevice">
-      <h3 class="Bold">About the device</h3>
+        <h3 class="Bold">About the device</h3>
       <table class="specsTable">
         <tr>
           <td class="Bold">Name of the Device</td>
@@ -16,7 +18,7 @@ const apps = {
         </tr>
         <tr>
           <td class="Bold">Operating System</td>
-          <td>alphariu5 OS</td>
+          <td>alphariu5-OS</td>
         </tr>
         <tr>
           <td class="Bold">OS Version</td>
@@ -63,7 +65,8 @@ const apps = {
   },
   About:{
     title:"about.txt",
-    backgroundColor: "#2a2b38",
+    width: 500,
+    height: 400,
     content: `
       <div class ="aboutWindow">
         <h1>GIANT FUCKASS TITLE PLACEHOLDER</h1>
@@ -94,11 +97,13 @@ const apps = {
 
   Internet: {
     title: "Internet",
+    width: 850,
+    height: 550,
     content: `
         <div class="browserWindow">
-          <div>
-            <h1 class="browserLogo">Internet</h1>
-          </div>
+          <br>
+          <img src="assets/img/browserAscii.png" class="browserLogo">
+          <b>The nonexistent browser</b>
           <br>
           <input type="text" placeholder="Something went wrong :(" class="searchBar">
           <br>
@@ -114,8 +119,8 @@ const apps = {
 
   Terminal: {
     title: "Command Prompt",
-    width: 700,
-    height: 400,
+    width: 800,
+    height: 450,
     content: `
         <div class="terminal-window">
             <div class="content">
@@ -136,12 +141,14 @@ const apps = {
 
   startupService: {
     title: "funny little thing",
+    width: 500,
+    height: 400,
     content: `
-        <div class="startupService">
+        <div class="funnyVirus">
           <h3>funny program</h3>
-          <p>Running...</p>
-          <p>Status: running now lol</p>
-          <img src="assets/img/themau5.gif">
+          <p>now running</p>
+          <p>lol</p>
+          <img class="funnyVirusImage" src="assets/img/themau5.gif">
         </div>
     `
   },
@@ -347,6 +354,30 @@ function handleTerminal(event) {
 }
 
 //Termnial commands
+
+/*
+  Comandos:
+  (sin el guion obviamente)
+  -help
+  -ads_off
+  -ads_on
+  -sudo
+  -sudo rm -rf /
+  -deadmau5
+  -secret
+  -credits
+  -whoami
+  -dir
+  -cd
+  -clear/cls
+  -tron.run
+  -encom
+  -ares.run
+  -clu.run
+  -sark.run
+  -quorra.iso
+  -thegrid
+*/
 function executeCommand(command) {
 
     const output =
@@ -359,7 +390,7 @@ function executeCommand(command) {
             output.innerHTML += `
                 <div>
                     <p>>${command}</p>
-                    >just type something n hope it works
+                    >just type something n hope it works (˶>⩊<˶)
                 </div>
             `;
             break;
@@ -371,7 +402,7 @@ function executeCommand(command) {
             output.innerHTML += `
                 <div>
                     <p>>${command}</p>
-                    >Advertisement Service Disabled.
+                    >sorry for bothering u
                 </div>
             `;
             break;
@@ -396,10 +427,9 @@ function executeCommand(command) {
                   >you dont have the permissions to run this command
                 </div>
             `;
-
             break;
             
-        case "sudo rm -rf /":
+        case "sudo rm -rf /*":
 
             output.innerHTML += `
                 <div>
@@ -407,30 +437,28 @@ function executeCommand(command) {
                     >why do you hate me :(
                 </div>
             `;
-
             break;
 
         case "deadmau5":
 
             output.innerHTML += `
                 <div>
-                    <p>
-                      ⣿⣿⣿⠿⠛⠛⠋⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠛⠙⠛⠻⢿⣿⣿⣿⣿
-                      ⣿⡟⠁⠄⠄⠄⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⡿⠋⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿
-                      ⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⣿⣿⣿⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
-                      ⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
-                      ⣿⣷⡀⠄⠄⠄⠄⠄⠄⣰⣾⣿⡆⠄⠄⠄⢾⣿⣶⡄⠄⠄⠄⠄⠄⠄⣠⣿⣿⣿
-                      ⣿⣿⣿⣦⣄⣀⠄⠄⠄⠻⠿⠛⠄⠄⠄⠄⠈⠛⠿⠃⠄⠄⢀⣀⣤⣾⣿⣿⣿⣿
-                      ⣿⣿⣿⣿⣿⣿⣿⣿⠄⣤⣄⣀⣀⣀⣀⣀⣀⣀⣤⡤⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
-                      ⣿⣿⣿⣿⣿⣿⣿⣿⣆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿
-                      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡈⠻⠿⣿⣿⣿⠿⠛⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-                      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-                    </p>
+                    <pre>
+⣿⣿⣿⠿⠛⠛⠋⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠛⠙⠛⠻⢿⣿⣿⣿⣿
+⣿⡟⠁⠄⠄⠄⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⡿⠋⠄⠄⠄⠄⠄⠄⠄⠄⠙⣿⣿⣿
+⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⣿⣿⣿⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
+⣿⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿⣿
+⣿⣷⡀⠄⠄⠄⠄⠄⠄⣰⣾⣿⡆⠄⠄⠄⢾⣿⣶⡄⠄⠄⠄⠄⠄⠄⣠⣿⣿⣿
+⣿⣿⣿⣦⣄⣀⠄⠄⠄⠻⠿⠛⠄⠄⠄⠄⠈⠛⠿⠃⠄⠄⢀⣀⣤⣾⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠄⣤⣄⣀⣀⣀⣀⣀⣀⣀⣤⡤⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡈⠻⠿⣿⣿⣿⠿⠛⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                    </pre>
 
                     >man of culture i see...
                 </div>
             `;
-
             break;
 
         case "secret":
@@ -441,7 +469,6 @@ function executeCommand(command) {
                     >ACCESS GRANTED
                 </div>
             `;
-
             break;
         
         case "credits":
@@ -454,7 +481,6 @@ function executeCommand(command) {
                     <p>thats it</p>
                 </div>
             `;
-
             break;
 
             case "whoami":
@@ -465,7 +491,6 @@ function executeCommand(command) {
                     >MASTER_CONTROL_PROGRAM
                 </div>
             `;
-
             break;
 
             case "dir":
@@ -476,7 +501,6 @@ function executeCommand(command) {
                     >bro this is a fake windows, wtf are you expecting?????
                 </div>
             `;
-
             break;
 
             case "cd":
@@ -487,7 +511,6 @@ function executeCommand(command) {
                     >THIS IS A WEBSITE, WTF ARE YOU TRYING TO DO?????????
                 </div>
             `;
-
             break;
 
             case "clear":
@@ -496,13 +519,90 @@ function executeCommand(command) {
                 output.innerHTML = "";
 
                 break;
+            
+            case "tron.run":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >I FIGHT FOR THE USERS
+                </div>
+            `;
+            break;
+
+            case "encom":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >Flynn Lives
+                </div>
+            `;
+            break;
+
+            case "ares.run":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >ares.exe could not be found
+                </div>
+            `;
+            break;
+
+            case "clu.run":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >clu.exe is no longer available
+                </div>
+            `;
+            break;
+
+            case "sark.run":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >sark.exe has been deleted
+                </div>
+            `;
+            break;
+
+            case "quorra.iso":
+
+            output.innerHTML += `
+                <div>
+                    <p>>${command}</p>
+                    >quorra.iso could no be found
+                </div>
+            `;
+            break;
+
+            case "thegrid":
+
+            output.innerHTML += `
+                <div>
+                      <a href="https://youtu.be/4-J4duzP8Ng?si=fnICpzBn-CWUVgJd" class="theGridCommand" target="_blank"><p>The Grid</p></a>
+                      <p>A digital frontier</p>
+                      <p>I tried to picture clusters of information as they moved through the computer</p>
+                      <p>What do they look like?</p>
+                      <p>Ships? Motorcycles?</p>
+                      <p>Were the circuits like freeways?</p>
+                      <p>I kept dreaming of a world I thought I'd never see</p>
+                      <p>And then, one day</p>
+                      I got in
+                </div>
+            `;
+            break;
 
         default:
 
             output.innerHTML += `
                 <div>
                     <p>>Unknown command: ${command}</p>
-                    <p>>(if you send me the command you typed maybe ill add it later)</p>
+                    <p>> :P</p>
                 </div>
             `;
     }
